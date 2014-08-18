@@ -7,5 +7,10 @@
         "/public": "@public"
       }
     }
+  },
+  "membrane": {
+    "organic-express-server": {
+      "port": 1333
+    }
   }
 }
