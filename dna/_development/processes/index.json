@@ -1,0 +1,24 @@
+{
+  "plasma": {
+    "organic-express-static": {
+      "source": "node_modules/organic-express-static",
+      "reactOn": "ExpressServer",
+      "mount": {
+        "/public": "@public"
+      }
+    },
+    "organic-express-response": {
+      "skipDefaultErrorResponse": true
+    },
+    "buildJavascripts": "@angel.build.js",
+    "buildStylesheets": "@angel.build.css"
+  },
+  "membrane": {
+    "bunyan-output": {
+      "bunyanInit": "context/bunyan-development"
+    },
+    "organic-express-server": {
+      "log": true
+    }
+  }
+}

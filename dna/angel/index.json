@@ -1,0 +1,13 @@
+{
+  "reactions": {
+    "build js": {
+      "emit": "@angel.build.js"
+    },
+    "build css": {
+      "emit": "@angel.build.css"
+    },
+    "build": {
+      "do": ["build js", "build css"]
+    }
+  }
+}

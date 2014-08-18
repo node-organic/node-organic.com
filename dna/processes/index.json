@@ -1,0 +1,117 @@
+{
+  "plasma": {
+    "organic-express-sessions": {
+      "source": "node_modules/organic-express-mongo-sessions",
+      "reactOn": "ExpressServer",
+      "emitReady": "ExpressSessions",
+      "cookie_secret": "@processes.index.membrane.organic-express-server.cookie_secret",
+      "db": "@database.name"
+    },
+    "organic-express-passport": {
+      "source": "node_modules/organic-express-passport",
+      "reactOn": "ExpressServer",
+      "mongooseUser": "context/models/user",
+      "oauth": {
+        "uncomment-facebook": {
+          "clientID": "get_your_own",
+          "clientSecret": "get_your_own",
+          "callbackURL": "http://127.0.0.1:1337/auth/facebook/callback"
+        },
+        "uncomment-twitter": {
+          "consumerKey": "get_your_own",
+          "consumerSecret": "get_your_own",
+          "callbackURL": "http://127.0.0.1:1337/auth/twitter/callback"
+        },
+        "uncomment-github": {
+          "clientID": "get_your_own",
+          "clientSecret": "get_your_own",
+          "callbackURL": "http://127.0.0.1:1337/auth/github/callback"
+        },
+        "uncomment-google": {
+          "returnURL": "http://127.0.0.1:1337/auth/google/callback",
+          "realm": "http://127.0.0.1:1337"
+        }
+      }
+    },
+    "organic-api-routes": {
+      "source": "node_modules/organic-express-routes",
+      "reactOn": [
+        "ExpressServer",
+        "ExpressSessions"
+      ],
+      "pattern": "/**/*.js",
+      "path": "context/routes/api",
+      "helpers": "context/routes/api-helpers",
+      "mount": "/api",
+      "log": true,
+      "emitReady": "ApiRoutesReady"
+    },
+    "organic-site-routes": {
+      "source": "node_modules/organic-express-routes",
+      "reactOn": [
+        "ExpressServer",
+        "ExpressSessions"
+      ],
+      "pattern": "/**/*.js",
+      "path": "context/routes/site",
+      "helpers": "context/routes/site-helpers",
+      "log": true,
+      "emitReady": "SiteRoutesReady"
+    },
+    "organic-express-response": {
+      "source": "node_modules/organic-express-response",
+      "reactOn": [
+        "ExpressServer",
+        "ApiRoutesReady",
+        "SiteRoutesReady"
+      ],
+      "skipDefaultResponse": true
+    },
+    "organic-static-pages": {
+      "source": "node_modules/organic-express-staticpages",
+      "reactOn": [
+        "ExpressServer",
+        "ApiRoutesReady",
+        "SiteRoutesReady"
+      ],
+      "pattern": "/**/*.html",
+      "path": "context/pages",
+      "emitReady": "StaticPagesReady",
+      "exclude": "layouts",
+      "log": true
+    }
+  },
+  "membrane": {
+    "console": {
+      "source": "node_modules/organic-console",
+      "emitEvery": {
+        "type": "console"
+      }
+    },
+    "bunyan-output": {
+      "source": "node_modules/organic-bunyan-output",
+      "reactOn": "console",
+      "bunyan": {
+        "name": "master"
+      }
+    },
+    "organic-mongoose": {
+      "source": "node_modules/organic-mongoose",
+      "database": "@database"
+    },
+    "organic-express-server": {
+      "source": "node_modules/organic-express-server",
+      "port": 1337,
+      "initScript": "context/init-express-app",
+      "emitReady": "ExpressServer",
+      "cookie_secret": "stem",
+      "views": "context/pages",
+      "expressSetupDoneOnce": [
+        "ExpressServer",
+        "ApiRoutesReady",
+        "SiteRoutesReady",
+        "StaticPagesReady"
+      ]
+    }
+  }
+}
