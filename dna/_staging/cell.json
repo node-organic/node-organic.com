@@ -8,7 +8,7 @@
   "branch": "master",
   "origin": "origin",
   "runAngel": "CELL_MODE=_staging node ./node_modules/.bin/angel",
-  "start": "{sourceNode}; cd {cwd}; CELL_MODE=_staging pm2 start index.js --name 'nodeorganic'",
+  "start": "{sourceNode}; cd {cwd}; CELL_MODE=_staging pm2 start index.js --name 'nodeorganic' -x",
   "stop": "{sourceNode}; cd {cwd}; pm2 stop nodeorganic",
   "restart": "{sourceNode}; cd {cwd}; pm2 restart nodeorganic",
   "status": "{sourceNode}; cd {cwd}; pm2 status nodeorganic",
