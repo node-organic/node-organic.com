@@ -2,7 +2,6 @@ header {
   margin: 0 auto;
   width: 400px;
   text-align: center;
-  padding-top: 200px;
 }
 
 header p {
@@ -13,4 +12,13 @@ p.underconstruction {
   margin: 0 auto;
   width: 960px;
   text-align: center;
+}
+
+article.iframe-wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
 }

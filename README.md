@@ -2,6 +2,8 @@
 
 ## setup
 
+    $ git clone https://github.com/node-organic/node-organic.com.git node-organic.com
+    $ cd node-organic.com
     $ npm install
 
 ## start
