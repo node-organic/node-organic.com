@@ -1,17 +1,86 @@
+@import "../../bower_components/clearless/mixins/all.less";
+
+.reset();
+
+.clear {
+  clear: both;
+}
+
+body {
+  background-color: lightgreen;
+}
+
 header {
+  width: 100%;
+  border-bottom: 10px solid green;
+  .box-shadow( 0px 5px 5px 0px rgba(50, 50, 50, 0.75) );
+}
+
+header ul.menu {
+  list-style-type: none;
+}
+
+header ul.menu li {
+  float: left;
+}
+
+header ul.menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 10px;
+  color: green;
+}
+
+header ul.menu a:hover {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: underline;
+}
+
+header .center {
+  width: 960px;
   margin: 0 auto;
-  width: 400px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+header .topline {
+  border-bottom: 10px solid green;
+  .box-shadow( inset 0px -5px 5px 0px rgba(50, 50, 50, 0.75) );
+}
+
+header .topline .center {
+  background-color: white;
+  .box-shadow( inset 0px -5px 5px -2px rgba(50, 50, 50, 0.75) );
+  height: 50px;
+}
+
+header .content {
   text-align: center;
 }
 
 header p {
-  font-size: 1.4em;
+  font-size: 4em;
+  line-height: 150px;
+}
+
+.view-container {
+  margin: 0 auto;
+  padding-top: 10px;
+  width: 960px;
+  background-color: white;
+  min-height: 500px;
+  .box-shadow( inset 0px 5px 5px -2px rgba(50, 50, 50, 0.75) );
+  margin-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 p.underconstruction {
   margin: 0 auto;
   width: 960px;
   text-align: center;
+  padding-top: 150px;
 }
 
 article.iframe-wrapper {

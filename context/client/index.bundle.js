@@ -19,5 +19,5 @@ angular.module('app', [
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'public/templates/underconstruction.html'});
   $routeProvider.when('/about', {templateUrl: 'public/templates/about.html'});
-  $routeProvider.otherwise({redirectTo: '/404'});
+  $routeProvider.otherwise({redirectTo: "404"});
 }]);
