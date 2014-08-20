@@ -3,16 +3,19 @@
 
 .normalize();
 
+@solidcolor: #6e9541;
+
 .clear {
   clear: both;
 }
 
 body {
-  background-color: lightgreen;
+  background-color: @solidcolor;
+  height: 100%;
 }
 
 h1 {
-  color: green;
+  color: @solidcolor;
 }
 
 @import "./header.less";
@@ -20,13 +23,16 @@ h1 {
 
 .view-container-wrapper {
   margin: 0 auto;
-  padding-top: 10px;
   width: 960px;
   background-color: white;
   min-height: 100%;
+  padding-top: 50px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
+  .box-shadow( inset 0px 5px 5px -2px rgba(50, 50, 50, 0.75), 
+                5px 0px 5px -2px rgba(50, 50, 50, 0.75), 
+                -5px 0px 5px -2px rgba(50, 50, 50, 0.75); );
 }
 
 .view-container {
@@ -37,7 +43,6 @@ p.underconstruction {
   margin: 0 auto;
   width: 960px;
   text-align: center;
-  padding-top: 150px;
 }
 
 article.iframe-wrapper {

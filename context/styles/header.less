@@ -1,74 +1,96 @@
 header {
   width: 100%;
-  border-bottom: 10px solid green;
+  height: 436px;
   .box-shadow( 0px 5px 5px 0px rgba(50, 50, 50, 0.75) );
 }
 
-header ul.menu {
-  list-style-type: none;
+header .topline {
+  .box-shadow( inset 0px -5px 5px 0px rgba(50, 50, 50, 0.75) );
 }
 
-header ul.menu li {
+header .topline .content {
+  width: 960px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+  .box-shadow( inset 0px -5px 5px -2px rgba(50, 50, 50, 0.75) );
+  height: 40px;
+  .clearfix();
+}
+
+header .topline .content div {
+  background-color: whitesmoke;
+  margin-left: 5px;
   float: left;
 }
 
-header ul.menu a {
+header .thumblr {
+  background-image: url("/public/images/thumblr.png");
+  width: 41px;
+  height: 40px;
+}
+
+header .fb {
+  background-image: url("/public/images/fb.png");
+  width: 41px;
+  height: 40px;
+}
+
+header .twitter {
+  background-image: url("/public/images/twitter.png");
+  width: 40px;
+  height: 40px;
+}
+
+header .logo {
+  height: 396px;
+  background: url("/public/images/header-background.jpg") no-repeat center,
+              url("/public/images/header-background-left.png") repeat-x left top,
+              url("/public/images/header-background-right.png") repeat-x 50% top;
+}
+
+header .menu-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+
+header nav {
+  position: absolute;
+  bottom: 50px;
+  width: 960px;
+}
+
+header nav ul {
+  list-style-type: none;
+}
+
+header nav ul li {
+  float: left;
+}
+
+header nav ul a {
   text-transform: uppercase;
   text-decoration: none;
   margin: 10px;
   color: green;
 }
 
-header ul.menu a:hover {
+header nav ul a:hover {
   text-transform: uppercase;
   color: white;
   text-decoration: underline;
+
+  .box-shadow( 0px 51px 0px 0px rgba(255, 255, 255, 1) );
 }
 
-header .center {
-  width: 960px;
-  margin: 0 auto;
-  padding-left: 50px;
-  padding-right: 50px;
-}
+header nav ul a.active {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: underline;
 
-header .topline {
-  border-bottom: 10px solid green;
-  .box-shadow( inset 0px -5px 5px 0px rgba(50, 50, 50, 0.75) );
-}
-
-header .topline .center {
-  background-color: white;
-  .box-shadow( inset 0px -5px 5px -2px rgba(50, 50, 50, 0.75) );
-  height: 50px;
-}
-
-header .topline .center div {
-  background-color: whitesmoke;
-  margin-left: 5px;
-  width: 50px;
-  height: 50px;
-  float: left;
-}
-
-header .content {
-  text-align: center;
-  padding-bottom: 15px;
-}
-
-header a.title,a.title:hover,a.title:visited {
-  font-size: 4em;
-  line-height: 150px;
-  text-decoration: none;
-  color: green;
-}
-
-.header.bottomline {
-  margin: 0 auto;
-  width: 960px;
-  background-color: white;
-  height: 10px;
-  .box-shadow( inset 0px 5px 5px -2px rgba(50, 50, 50, 0.75) );
-  padding-left: 50px;
-  padding-right: 50px;
+  .box-shadow( 0px 51px 0px 0px rgba(255, 255, 255, 1) );
 }
