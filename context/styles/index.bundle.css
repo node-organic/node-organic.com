@@ -3,23 +3,34 @@
 
 .normalize();
 
-@solidcolor: #6e9541;
-
 .clear {
   clear: both;
 }
 
 body {
-  background-color: @solidcolor;
+  background-color: #6e9541;
   height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
 }
 
 h1 {
-  color: @solidcolor;
+  color: #409945;
+}
+
+a {
+  color: #409945; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
 }
 
 @import "./header.less";
 @import "./footer.less";
+@import "./menu.less";
 
 .view-container-wrapper {
   margin: 0 auto;
