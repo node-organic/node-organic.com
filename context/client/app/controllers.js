@@ -3,6 +3,6 @@
 /* Controllers */
 
 angular.module('app.controllers', [])
-  .controller('LandingCtrl', ['$scope', function($scope) {
-    
-  }])
+  .controller('app', function($scope, URLS) {
+    $scope.URLS = URLS  
+  })
