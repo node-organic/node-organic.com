@@ -1,5 +1,10 @@
 {
   "plasma": {
+    "npm-organic-modules": {
+      "source": "plasma/npm-organic-modules",
+      "reactOn": "modules/cached",
+      "refreshInterval": 300000
+    },
     "organic-express-sessions": {
       "source": "node_modules/organic-express-mongo-sessions",
       "reactOn": "ExpressServer",
