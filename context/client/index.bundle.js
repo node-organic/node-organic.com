@@ -21,7 +21,7 @@ angular.module('app', [
   "discussionsUrl": "https://github.com/VarnaLab/node-organic/issues"
 })
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'public/templates/underconstruction.html'});
+  $routeProvider.when('/', {redirectTo: 'about'});
   $routeProvider.when('/about', {templateUrl: 'public/templates/about.html'});
   $routeProvider.when('/404', {templateUrl: 'public/templates/404.html'});
   $routeProvider.otherwise({redirectTo: "404"});

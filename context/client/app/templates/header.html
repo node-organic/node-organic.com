@@ -8,25 +8,6 @@
   </div>
   <div class="logo"></div>
   <div class="menu-wrapper">
-    <nav>
-      <ul>
-        <li>
-          <a href="#about" class="active">about</a>
-          <div class="underline"></div>
-        </li>
-        <li>
-          <a href="{{URLS.documentationUrl}}">documentation</a>
-          <div class="underline"></div>
-        </li>
-        <li>
-          <a href="#modules">modules</a>
-          <div class="underline"></div>
-        </li>
-        <li>
-          <a href="{{URLS.discussionsUrl}}">discussions</a>
-          <div class="underline"></div>
-        </li>
-      </ul>
-    </nav>
+    <ng-include src="'/public/templates/menu.html'"></ng-include>
   </div>
 </header>
