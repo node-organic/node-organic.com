@@ -17,12 +17,13 @@ angular.module('app', [
   'app.controllers'
 ])
 .constant("URLS", {
-  "documentationUrl":"https://github.com/VarnaLab/node-organic/tree/master/docs",
-  "discussionsUrl": "https://github.com/VarnaLab/node-organic/issues"
+  "documentation":"https://github.com/VarnaLab/node-organic/tree/master/docs",
+  "discussions": "https://github.com/VarnaLab/node-organic/issues",
+  "modules": "#/modules",
+  "home": "#/"
 })
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {redirectTo: 'about'});
-  $routeProvider.when('/about', {templateUrl: 'public/templates/about.html'});
+  $routeProvider.when('/', {templateUrl: 'public/templates/about.html'});
   $routeProvider.when('/404', {templateUrl: 'public/templates/404.html'});
   $routeProvider.otherwise({redirectTo: "404"});
 }])
