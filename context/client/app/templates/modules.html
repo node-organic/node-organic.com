@@ -1,0 +1,46 @@
+<section class="core grid">
+  <div class="col col-1-2">
+    <a href="https://github.com/varnalab/node-organic/" target="_blank">
+      <div>
+        <span><i class="fa fa-download"></i> node-organic</span>
+        <p>core lib</p>
+      </div>
+    </a>
+  </div>
+  <div class="col col-2-2">
+    <a href="https://github.com/outbounder/organic-stem-skeleton" target="_blank">
+      <div>
+        <span><i class="fa fa-download"></i> organic-stem-skeleton</span>
+        <p>stem cell suitable for apis and frontends</p>
+      </div>
+    </a>
+  </div>
+</section>
+<hr />
+<section ng-controller="modules" class="modules">
+  <h1>Organic modules published in npm</h1>
+  <form>
+    <input type="text" scroll-on-focus blur-on-esc placeholder="filter organic modules by name" ng-model="filter.name" tabindex="1" />
+  </form>
+  <h2>Total results on npmjs.org: {{ modules.length }}</h2>
+  <hr />
+  <div class="animate-repeat module" ng-repeat="module in modules | filter:filter as results">
+    <div class="pull-left">
+      <div>
+        <a href="{{ module.links.npm }}">{{ module.name }}</a>
+        <span class="version"> - {{ module.version }}</span>
+      </div>
+      <div class="description">{{ module.description }}</div>
+    </div>
+    <div class="pull-right">
+      <div>{{ module.stars }} <i class="fa fa-star"></i></div>
+      <div>{{ module.downloads }} <i class="fa fa-download"></i></div>
+      <div>by {{ module.author }}</div>
+    </div>
+    <div class="clear"></div>
+    <hr />
+  </div>
+  <div class="animate-repeat" ng-if="results.length == 0">
+    <h2>Given name `{{filter.name}}` doesn't match any module</h2>
+  </div>
+</section>

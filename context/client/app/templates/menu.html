@@ -1,7 +1,7 @@
-<nav>
+<nav ng-controller="menu">
   <ul>
     <li>
-      <a href="{{URLS.home}}" class="active">about</a>
+      <a href="{{URLS.home}}" ng-class="{'active': currentPath == URLS.home}">about</a>
       <div class="underline"></div>
     </li>
     <li>
@@ -9,7 +9,7 @@
       <div class="underline"></div>
     </li>
     <li>
-      <a href="{{URLS.modules}}">modules</a>
+      <a href="{{URLS.modules}}" ng-class="{'active': currentPath == URLS.modules}">modules</a>
       <div class="underline"></div>
     </li>
     <li>
