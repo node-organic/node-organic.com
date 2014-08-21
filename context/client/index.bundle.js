@@ -15,9 +15,14 @@ angular.module('app', [
   'ngResource',
   'ngRoute',
   'app.controllers'
-]).
-config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {templateUrl: 'public/templates/underconstruction.html'});
+])
+.constant("URLS", {
+  "documentationUrl":"https://github.com/VarnaLab/node-organic/tree/master/docs",
+  "discussionsUrl": "https://github.com/VarnaLab/node-organic/issues"
+})
+.config(['$routeProvider', function($routeProvider) {
+  $routeProvider.when('/', {redirectTo: 'about'});
   $routeProvider.when('/about', {templateUrl: 'public/templates/about.html'});
-  $routeProvider.otherwise({redirectTo: '/404'});
-}]);
+  $routeProvider.when('/404', {templateUrl: 'public/templates/404.html'});
+  $routeProvider.otherwise({redirectTo: "404"});
+}])

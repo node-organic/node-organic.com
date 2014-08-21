@@ -1,11 +1,53 @@
-header {
-  margin: 0 auto;
-  width: 400px;
-  text-align: center;
+/* https://github.com/clearleft/clearless */
+@import "../../bower_components/clearless/mixins/all.less";
+
+.normalize();
+
+.clear {
+  clear: both;
 }
 
-header p {
-  font-size: 1.4em;
+body {
+  background-color: #6e9541;
+  height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+h1 {
+  color: #409945;
+}
+
+a {
+  color: #409945; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+@import "./header.less";
+@import "./footer.less";
+@import "./menu.less";
+
+.view-container-wrapper {
+  margin: 0 auto;
+  width: 960px;
+  background-color: white;
+  min-height: 100%;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  .box-shadow( inset 0px 5px 5px -2px rgba(50, 50, 50, 0.75), 
+                5px 0px 5px -2px rgba(50, 50, 50, 0.75), 
+                -5px 0px 5px -2px rgba(50, 50, 50, 0.75); );
+}
+
+.view-container {
+  margin-right: 75px;
 }
 
 p.underconstruction {
