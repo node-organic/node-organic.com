@@ -1,7 +1,8 @@
-[
-  "public",
-  "build",
-  "bower_components",
-  "context/client/app",
-  "context/client/data"
-]
+{
+  "public": [
+    "public",
+    "build",
+    "bower_components"
+  ],
+  "public/templates": [ "context/client/app/templates" ]
+}
