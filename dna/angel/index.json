@@ -10,7 +10,7 @@
       "run": "scripts/static-files"
     },
     "build": {
-      "do": ["prepare static files", "build js", "build css"]
+      "do": ["build js", "build css"]
     }
   }
 }
