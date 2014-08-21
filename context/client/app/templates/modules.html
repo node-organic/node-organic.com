@@ -1,10 +1,11 @@
 <section ng-controller="modules" class="modules">
-  <form>
-    <input type="text" placeholder="search organic module"/>
-  </form>
   <h1>Organic modules published in npm</h1>
+  <form>
+    <input type="text" scroll-on-focus placeholder="filter organic modules by name" ng-model="filter.name" tabindex="1" />
+  </form>
+  <h2>Total results on npmjs.org: {{ modules.length }}</h2>
   <hr />
-  <div class="animate-repeat module" ng-repeat="module in modules">
+  <div class="animate-repeat module" ng-repeat="module in modules | filter:filter as results">
     <div>
       <div class="pull-left">
         <a href="{{ module.links.npm }}">{{ module.name }}</a>
@@ -22,6 +23,6 @@
     <hr />
   </div>
   <div class="animate-repeat" ng-if="results.length == 0">
-    <strong>No results found...</strong>
+    <h2>Given name `{{filter.name}}` doesn't match any module</h2>
   </div>
 </section>

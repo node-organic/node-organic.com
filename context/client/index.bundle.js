@@ -15,7 +15,8 @@ angular.module('app', [
   'ngResource',
   'ngRoute',
   'app.controllers',
-  'app.services'
+  'app.services',
+  'app.directives'
 ])
 .constant("URLS", {
   "documentation":"https://github.com/VarnaLab/node-organic/tree/master/docs",
