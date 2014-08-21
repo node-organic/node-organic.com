@@ -1,7 +1,7 @@
 {
   "membrane": {
     "organic-express-server": {
-      "port": 1333
+      "port": 1332
     }
   }
 }
