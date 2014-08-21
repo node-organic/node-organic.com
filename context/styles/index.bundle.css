@@ -5,8 +5,13 @@
 /* https://github.com/tylertate/semantic.gs */
 @import "../../bower_components/grid.less/src/grid.less";
 
+/* http://fortawesome.github.io/Font-Awesome */
+@import "../../bower_components/font-awesome/less/font-awesome.less";
+@fa-font-path:   "/public/font-awesome/fonts";
+
 @import "./app-page.less";
 @import "./header.less";
 @import "./footer.less";
 @import "./menu.less";
 @import "./about.less";
+@import "./modules.less";
