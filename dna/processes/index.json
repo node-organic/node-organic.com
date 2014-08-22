@@ -3,7 +3,7 @@
     "npm-organic-modules": {
       "source": "plasma/npm-organic-modules",
       "reactOn": "modules/cached",
-      "refreshInterval": 300000
+      "log": true
     },
     "organic-express-sessions": {
       "source": "node_modules/organic-express-mongo-sessions",

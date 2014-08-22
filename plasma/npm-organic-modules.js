@@ -18,8 +18,11 @@ module.exports = function(plasma, dna){
     }
   */]
   var refreshMemory = function(){
+    if(dna.log)
+      console.log("refreshing organic modules memory")
     var startMoment = moment()
     npm.commands.search(["organic-"], true, function(err, data){
+      if(dna.log) console.log("npm search results:", err, typeof data)
       if(err) return console.error(err)
       result = []
       for(var packagename in data){
@@ -35,11 +38,16 @@ module.exports = function(plasma, dna){
         console.info("refreshed in ", moment().diff(startMoment))
     })
   }
+
+  if(dna.log) console.log("npm load")
   npm.load({ loglevel: 'silent' }, function (er) {
+    if(dna.log) console.log("npm loaded", er)
     if(er) console.error(er)
     refreshMemory()
-    refreshIntervalID = setInterval(refreshMemory, dna.refreshInterval)
+    if(dna.refreshInterval)
+      refreshIntervalID = setInterval(refreshMemory, dna.refreshInterval)
   })
+
   plasma.on(dna.reactOn, function(c, next){
     next(null, result)
   })
