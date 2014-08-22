@@ -1,3 +1,4 @@
+var path = require("path")
 var npm = require("npm")
 var moment = require("moment")
 
@@ -17,6 +18,18 @@ module.exports = function(plasma, dna){
       }
     }
   */]
+  var parseAndRemember = function(data) {
+    result = []
+    for(var packagename in data){
+      data[packagename].downloads = "n/a"
+      data[packagename].stars = "n/a"
+      data[packagename].author = data[packagename].maintainers?data[packagename].maintainers.toString().replace(/=/g, ""):"N/A"
+      data[packagename].links = {
+        npm: "https://www.npmjs.org/package/"+packagename
+      }
+      result.push(data[packagename])
+    }
+  }
   var refreshMemory = function(){
     if(dna.log)
       console.log("refreshing organic modules memory")
@@ -24,29 +37,23 @@ module.exports = function(plasma, dna){
     npm.commands.search(["organic-"], true, function(err, data){
       if(dna.log) console.log("npm search results:", err, typeof data)
       if(err) return console.error(err)
-      result = []
-      for(var packagename in data){
-        data[packagename].downloads = "n/a"
-        data[packagename].stars = "n/a"
-        data[packagename].author = data[packagename].maintainers?data[packagename].maintainers.toString().replace(/=/g, ""):"N/A"
-        data[packagename].links = {
-          npm: "https://www.npmjs.org/package/"+packagename
-        }
-        result.push(data[packagename])
-      }
+      parseAndRemember(data)
       if(dna.log)
         console.info("refreshed in ", moment().diff(startMoment))
     })
   }
 
   if(dna.log) console.log("npm load")
-  npm.load({ loglevel: 'silent' }, function (er) {
-    if(dna.log) console.log("npm loaded", er)
-    if(er) console.error(er)
-    refreshMemory()
-    if(dna.refreshInterval)
-      refreshIntervalID = setInterval(refreshMemory, dna.refreshInterval)
-  })
+  if(!dna.useMemory)
+    npm.load({ loglevel: 'silent' }, function (er) {
+      if(dna.log) console.log("npm loaded", er)
+      if(er) console.error(er)
+      refreshMemory()
+      if(dna.refreshInterval)
+        refreshIntervalID = setInterval(refreshMemory, dna.refreshInterval)
+    })
+  else
+    parseAndRemember(require(path.join(process.cwd(), dna.useMemory)))
 
   plasma.on(dna.reactOn, function(c, next){
     next(null, result)
