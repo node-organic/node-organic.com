@@ -3,7 +3,7 @@
     "npm-organic-modules": {
       "source": "plasma/npm-organic-modules",
       "reactOn": "modules/cached",
-      "useMemory": "plasma/modules.json"
+      "useMemory": false
     },
     "organic-express-sessions": {
       "source": "node_modules/organic-express-mongo-sessions",
