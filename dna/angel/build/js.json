@@ -1,4 +1,4 @@
-{ 
+{
   "type": "build",
   "source": "node_modules/organic-globdir",
   "root": "context/client",

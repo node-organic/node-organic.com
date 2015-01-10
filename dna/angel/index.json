@@ -6,11 +6,12 @@
     "build css": {
       "emit": "@angel.build.css"
     },
-    "prepare static files": {
-      "run": "scripts/static-files"
-    },
     "build": {
-      "do": ["build js", "build css"]
+      "do": [
+        "build js",
+        "build css",
+        "prepare static files"
+      ]
     }
   }
 }

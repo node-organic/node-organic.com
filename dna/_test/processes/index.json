@@ -11,7 +11,11 @@
       "recreateDatabase": true
     },
     "organic-express-server": {
-      "port": 13371
+      "port": 13371,
+      "uploadsDir": "tests/uploads"
+    },
+    "bunyan-output": {
+      "bunyanInit": "context/initializers/bunyan-development"
     }
   }
 }
