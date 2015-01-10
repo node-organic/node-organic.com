@@ -5,7 +5,7 @@
   "cwd": "~/staging.node-organic.com",
   "main": "index.js",
   "source": "https://github.com/node-organic/node-organic.com.git",
-  "branch": "master",
+  "branch": "feature/update-skeleton-and-fixes",
   "origin": "origin",
   "runAngel": "CELL_MODE=_staging node ./node_modules/.bin/angel",
   "start": "{sourceNode}; cd {cwd}; CELL_MODE=_staging pm2 start index.js --name '{name}' -x",
