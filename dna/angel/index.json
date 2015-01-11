@@ -9,8 +9,7 @@
     "build": {
       "do": [
         "build js",
-        "build css",
-        "prepare static files"
+        "build css"
       ]
     }
   }
