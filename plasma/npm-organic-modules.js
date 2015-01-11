@@ -53,7 +53,7 @@ module.exports = function(plasma, dna){
         refreshIntervalID = setInterval(refreshMemory, dna.refreshInterval)
     })
   else
-    parseAndRemember(require(path.join(process.cwd(), dna.useMemory)))
+    result = require(path.join(process.cwd(), dna.useMemory))
 
   plasma.on(dna.reactOn, function(c, next){
     next(null, result)
