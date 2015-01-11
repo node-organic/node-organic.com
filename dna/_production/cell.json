@@ -16,5 +16,6 @@
   "install": "mkdir -p {cwd} ; cd {cwd} ; git clone {source} . ; {sourceNode} ; npm install --production; {build}",
   "upgrade": " cd {cwd} ; git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; {sourceNode}; npm install --production ; {build} ; {restart}",
   "upgrade-without-build": " cd {cwd} ; git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; {sourceNode}; npm install --production ; {restart}",
-  "uninstall": "rm -rf {cwd}"
+  "uninstall": "rm -rf {cwd}",
+  "reinstall-modules": "{sourceNode}; cd {cwd}; rm -rf ./node_modules; npm install --production"
 }

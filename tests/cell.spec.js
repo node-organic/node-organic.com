@@ -8,7 +8,7 @@ describe("cell", function(){
     request({
       uri: helpers.httpendpoint+"/api/version"
     }, function(err, res, body){
-      expect(body).toBe('"0.0.0"')
+      expect(body).toBe('"0.0.1"')
       next()
     })
   })

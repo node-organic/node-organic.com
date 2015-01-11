@@ -5,7 +5,7 @@
   "cwd": "~/staging.node-organic.com",
   "main": "index.js",
   "source": "https://github.com/node-organic/node-organic.com.git",
-  "branch": "master",
+  "branch": "feature/update-skeleton-and-fixes",
   "origin": "origin",
   "runAngel": "CELL_MODE=_staging node ./node_modules/.bin/angel",
   "start": "{sourceNode}; cd {cwd}; CELL_MODE=_staging pm2 start index.js --name '{name}' -x",
@@ -16,5 +16,6 @@
   "install": "mkdir -p {cwd} ; cd {cwd} ; git clone {source} . ; {sourceNode} ; npm install --production; {build}",
   "upgrade": " cd {cwd} ; git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; {sourceNode}; npm install --production ; {build} ; {restart}",
   "upgrade-without-build": " cd {cwd} ; git fetch {origin} ; git checkout {branch} ; git pull {origin} {branch} ; {sourceNode}; npm install --production ; {restart}",
-  "uninstall": "rm -rf {cwd}"
+  "uninstall": "rm -rf {cwd}",
+  "reinstall-modules": "{sourceNode}; cd {cwd}; rm -rf ./node_modules; npm install --production"
 }

@@ -26,10 +26,12 @@
   },
   "membrane": {
     "bunyan-output": {
-      "bunyanInit": "context/bunyan-development"
+      "bunyanInit": "context/initializers/bunyan-development"
     },
     "organic-express-server": {
-      "log": true
+      "log": true,
+      "logRunning": true,
+      "useErrorHandler": true
     }
   }
 }
