@@ -1,7 +1,8 @@
 {
   "plasma": {
     "npm-organic-modules": {
-      "useMemory": false
+      "useMemory": false,
+      "log": true
     },
     "organic-express-static": {
       "source": "node_modules/organic-express-static",

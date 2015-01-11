@@ -29,6 +29,7 @@ module.exports = function(plasma, dna){
       }
       result.push(data[packagename])
     }
+    result.reverse() // bring latest on top
   }
   var refreshMemory = function(){
     if(dna.log)
