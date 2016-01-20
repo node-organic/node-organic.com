@@ -3,6 +3,11 @@ module.exports = {
     'extensions': ['', '.webpack.js', '.web.js', '.js']
   },
   'module': {
-    'loaders': []
+    'loaders': [
+      {
+        'test': /\.js$/,
+        'loader': 'ng-annotate'
+      }
+    ]
   }
 }

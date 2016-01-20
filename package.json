@@ -29,6 +29,7 @@
     "method-override": "^2.3.1",
     "moment": "^2.11.1",
     "multer": "^0.1.6",
+    "ng-annotate-loader": "^0.1.0",
     "npm": "1.4.29",
     "organic": ">=1.0.0",
     "organic-angel": "^0.3.2",
