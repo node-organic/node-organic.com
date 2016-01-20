@@ -16,7 +16,7 @@ module.exports = function (angel) {
   angel.on('deploy staging', function (angel) {
     var sequence = require('organic-stem-devtools/lib/sequencial-exec')
     sequence([
-      'npm run test:style',
+      // 'npm run test:style',
       'git checkout develop',
       'git push origin develop',
       'git pull origin develop',
