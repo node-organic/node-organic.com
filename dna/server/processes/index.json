@@ -3,7 +3,7 @@
     "npm-organic-modules": {
       "source": "./server/plasma/npm-organic-modules",
       "reactOn": "modules/cached",
-      "useMemory": "plasma/modules.json"
+      "useMemory": "server/plasma/modules.json"
     },
     "organic-api-routes": {
       "source": "organic-express-routes",
