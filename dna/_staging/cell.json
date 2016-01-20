@@ -4,7 +4,7 @@
   "sourceNode": ". ~/.nvm/nvm.sh && nvm use v{nodeVersion}",
   "cwd": "~/staging.node-organic.com",
   "main": "index.js",
-  "source": "git url",
+  "source": "https://github.com/node-organic/node-organic.com.git",
   "branch": "staging",
   "origin": "origin",
   "runAngel": "CELL_MODE=_staging node ./node_modules/.bin/angel",
