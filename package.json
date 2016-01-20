@@ -42,7 +42,8 @@
     "organic-plasma": "^1.0.x",
     "organic-plasma-feedback": "^0.0.3",
     "organic-stem-devtools": "^0.1.x",
-    "webpack-stream": "^2.3.0"
+    "webpack-stream": "^2.3.0",
+    "npm": "1.4.29"
   },
   "devDependencies": {
     "angelscripts-help": "0.1.0",
