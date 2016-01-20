@@ -19,7 +19,7 @@ angular.module('app', [
   'app.directives'
 ])
 .constant("URLS", {
-  "documentation":"https://github.com/VarnaLab/node-organic/tree/master/docs",
+  "documentation":"https://github.com/VarnaLab/node-organic",
   "discussions": "https://github.com/VarnaLab/node-organic/issues",
   "modules": "#/modules",
   "home": "#/"
