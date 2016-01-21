@@ -1,6 +1,6 @@
 {
-  "local": "./dna/_production/nginx.conf",
-  "dest": "/etc/nginx/site-enabled/{{{production domain}}}",
-  "remote": "{{{production server user}}}@{{{production domain}}}",
+  "local": "./dna/_staging/nginx.conf",
+  "dest": "/etc/nginx/sites-enabled/staging.node-organic.com",
+  "remote": "node@212.71.252.40",
   "restartCmd": "sudo service nginx restart"
 }
