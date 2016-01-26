@@ -44,7 +44,7 @@
     "organic-nucleus": "^1.0.x",
     "organic-plasma": "^1.0.x",
     "organic-plasma-feedback": "^0.0.3",
-    "organic-stem-devtools": "^0.1.8",
+    "organic-stem-devtools": "^0.1.10",
     "webpack-stream": "^2.3.0"
   },
   "devDependencies": {
