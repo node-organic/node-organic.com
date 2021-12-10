@@ -1,5 +1,0 @@
-node-organic.com team
-=====================
-
-Pavel Dobrev - design
-Boris Filipov - implementation
