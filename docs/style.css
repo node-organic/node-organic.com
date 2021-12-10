@@ -1,0 +1,198 @@
+body {
+  background-color: #6e9541;
+  height: 100%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+
+h1,h2 {
+  color: #409945;
+}
+
+a {
+  color: #409945; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: green;
+  text-decoration: none;
+}
+
+.view-container-wrapper {
+  margin: 0 auto;
+  width: 960px;
+  background-color: white;
+  min-height: 100%;
+  padding-top: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+  /* .box-shadow( inset 0px 5px 5px -2px rgba(50, 50, 50, 0.75), 
+                5px 0px 5px -2px rgba(50, 50, 50, 0.75), 
+                -5px 0px 5px -2px rgba(50, 50, 50, 0.75); ); */
+}
+
+section .intro {
+  padding-left: 30px!important;
+  padding-right: 30px;
+}
+
+section .concept {
+  padding-left: 30px!important;
+  padding-right: 30px;
+}
+
+article.iframe-wrapper {
+  margin: 0 auto;
+  width: 960px;
+}
+
+.iframe-wrapper iframe {
+  width: 100%;
+}
+
+.downarrow {
+  background: url("/images/downarrow.png") center no-repeat;
+  height: 98px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  /* .box-shadow(inset 0px 5px 5px -3px rgba(50, 50, 50, 0.75)) */
+}
+footer {
+  width: 100%;
+  min-height: 156px;
+  background: url("/images/footer-background.jpg") center no-repeat,
+              url("/images/footer-background-repeat.png") top left / 100% 100% no-repeat;
+
+  /* .box-shadow( 0px -5px 5px 2px rgba(50, 50, 50, 0.25) ); */
+}
+
+footer .varnalablogo {
+  background-image: url("/images/varnalab-logo-w-reflection.png");
+  width: 73px;
+  height: 168px;
+  position: absolute;
+  top: -30px;
+  right: 140px;
+}
+
+footer .camplightlogo {
+  background-image: url("/images/camplight-logo-w-reflection.png");
+  width: 80px;
+  height: 174px;
+  position: absolute;
+  top: -30px;
+  right: 30px;
+}
+header {
+  width: 100%;
+  height: 436px;
+  /* .box-shadow( 0px 5px 5px 0px rgba(50, 50, 50, 0.25) ); */
+}
+
+header .topline {
+  /* .box-shadow( inset 0px -5px 5px 0px rgba(50, 50, 50, 0.25) ); */
+}
+
+header .topline .content {
+  width: 960px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  background-color: white;
+  /* .box-shadow( inset 0px -5px 5px -2px rgba(50, 50, 50, 0.25) ); */
+  height: 40px;
+  /* .clearfix(); */
+}
+
+header .topline .content .icon {
+  background-color: whitesmoke;
+  margin-left: 5px;
+  float: left;
+}
+
+header .logo {
+  height: 396px;
+  background: url("/images/header-background.jpg") no-repeat center,
+              url("/images/header-background-repeat.png") top left / 100% 100% no-repeat;
+}
+
+header .pull-right {
+  float: right;
+  /* .clearfix() */
+}
+.menu-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding-left: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+
+nav {
+  position: absolute;
+  width: 960px;
+}
+
+header nav {
+  bottom: 50px;
+}
+
+footer nav {
+  top: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  float: left;
+  position: relative;
+}
+
+nav ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 10px;
+  color: #2a4e2c;
+  font-size: 1.2em;
+}
+
+nav ul a:hover {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: underline;
+}
+
+nav ul a.active {
+  text-transform: uppercase;
+  color: white;
+  text-decoration: underline;
+}
+
+nav ul a:hover + div.underline {
+  display: block;
+}
+
+nav ul a.active + div.underline {
+  display: block;
+}
+
+nav ul div.underline {
+  display: none;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+}
+
+header div.underline {
+  bottom: -50px;
+  height: 16px;
+}
+
+footer div.underline {
+  top: -36px;
+  height: 15px;
+}

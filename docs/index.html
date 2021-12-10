@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>node-organic</title>
+  <link rel="stylesheet" href="/normalize.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body ng-controller="app">
+  <header>
+    <div class="topline">
+      <div class="content">
+        
+      </div>
+    </div>
+    <div class="logo"></div>
+    <div class="menu-wrapper">
+      <nav ng-controller="menu">
+        <ul>
+          <li>
+            <a href="https://github.com/node-organic/node-organic/">documentation</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <a href="https://github.com/orgs/node-organic/repositories">modules</a>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <a href="https://github.com/node-organic/node-organic/discussions">discussions</a>
+            <div class="underline"></div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="view-container-wrapper">
+    <div ng-view class="view-container">
+      <section class="grid">
+        <article class="intro col col-1-2">
+          <h1>Welcome</h1>
+          <p><b>Node-organic</b> is proof-of-concept project about organic software development.</p>
+          <p>It's core implementation in <a href="https://github.com/VarnaLab/node-organic" target="_blank">nodejs</a>
+            provides sustainable evolution-like software development from July 2012.</p>
+        </article>
+        <article class="concept col col-2-2">
+          <h1>Concept</h1>
+          <p>`node-organic` is proof-of-concept about organic software development inspired from <a
+              href="http://en.wikipedia.org/wiki/Organic_computing" target="_blank">organic computing</a>.</p>
+          <p>Software developed using node-organic-like concepts is able to support one or more of the following properties:
+          </p>
+          <ul>
+            <li>Self-configuration</li>
+            <li>Self-optimization</li>
+            <li>Self-protection</li>
+            <li>Self-reflection</li>
+          </ul>
+        </article>
+      </section>
+      <article class="iframe-wrapper">
+        <div class="downarrow"></div>
+        <iframe src="https://outbounder.github.io/organic-presentation-101/" height="560px"></iframe>
+        <a href="https://github.com/outbounder/organic-presentation-101"
+          target="_blank">https://github.com/outbounder/organic-presentation-101</a>
+      </article>
+    </div>
+  </div>
+  <footer>
+    <div class="menu-wrapper">
+      <div class="varnalablogo"></div>
+      <div class="camplightlogo"></div>
+    </div>
+  </footer>
+</body>
+
+</html>
