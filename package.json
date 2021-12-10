@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "develop": "cd ./src && npx static-server --open"
+    "develop": "cd ./src && npx static-server --open",
+    "publish": "git checkout gh-pages && git merge main && cp ./src/ ./ && git add --all && git commit -m 'publish' && git push origin gh-pages && git checkout main"
   },
   "repository": {
     "type": "git",
