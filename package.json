@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "develop": "cd ./src && npx static-server --open",
-    "publish": "git checkout gh-pages && git merge main && cp ./src/ ./ && git add --all && git commit -m 'publish' && git push origin gh-pages && git checkout main"
+    "publish": "git checkout gh-pages && git merge main && cp -r ./src/ ./docs && git add --all && git commit -m 'publish' && git push origin gh-pages && git checkout main"
   },
   "repository": {
     "type": "git",
